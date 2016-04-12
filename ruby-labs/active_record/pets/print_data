@@ -1,0 +1,2 @@
+#!/bin/bash
+psql vet_clinic3 -f print_data.sql

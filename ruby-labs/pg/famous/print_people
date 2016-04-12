@@ -1,0 +1,2 @@
+#!/bin/bash
+psql famous -f print_people.sql
