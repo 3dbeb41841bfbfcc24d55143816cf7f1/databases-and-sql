@@ -15,7 +15,7 @@ brew install postgresql
 ```
 brew list | grep postgres     # should return postgresql
 which postgres                # print the path to the executable
-postgres --version            # should print "9.3.x"
+postgres --version            # should print "9.4.x"
 ```
 
 ## Automate the startup of postgres
