@@ -2,11 +2,15 @@
 
 Note: This is more of a Code Along than a Lab.
 
-## Verify PostgreSQL is running
+## Install PostgreSQL
 
-PostgreSQL should have been installed during InstallFest
+We will use `brew` to install PostgreSQL
 
-### Verify the installation:
+```bash
+brew install postgresql
+```
+
+## Verify the installation:
 
 ```
 brew list | grep postgres     # should return postgresql
@@ -14,9 +18,9 @@ which postgres                # print the path to the executable
 postgres --version            # should print "9.3.x"
 ```
 
-### Automate the startup of postgres
+## Automate the startup of postgres
 
-The manual/hard way (from `brew info postgresql`)
+### The manual/hard way (taken from `brew info postgresql`)
 
 ```
 brew info postgresql          # will print instructions
@@ -31,7 +35,7 @@ launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
 ps -ef | grep postgres        # should show a few processes
 ```
 
-The easy way via `brew services`
+### The easy way via `brew services`
 
 ```
 # First install brew services
@@ -46,7 +50,7 @@ brew services list
 
 For more info, see: [Starting and Stopping Background Services with Homebrew](https://robots.thoughtbot.com/starting-and-stopping-background-services-with-homebrew)
 
-### Helpful Commands
+## Helpful Commands
 
 ```
 initdb -D /usr/local/var/postgres/   # manually start PostgreSQL
